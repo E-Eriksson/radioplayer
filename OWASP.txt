@@ -1,0 +1,22 @@
+1 What is OWASP and what is its primary mission as described in the article?
+owasp är en internationell ideell organisation och är dedikerade till webbapplikationssäkerhet
+
+2 Explain the concept of "Injection". Provide an example of how an injection attack could compromise a web application's security.
+Injektionsattacker inträffar när opålitlig data skickas till en kodtolkare genom en formulärinmatning eller någon annan datainlämning till en webbapplikation.
+Till exempel kan en angripare ange SQL kod i ett fält som förväntar sig text. Om den inmatningen inte är ordentligt säker, skulle detta resultera i att SQL-koden exekveras.
+
+3 Explain two strategies to prevent Broken Authentication vulnerabilities.
+Ett sätt är genom två faktors autentisering som kräver att inloggningen genomförs med mer än bara användarnamn + lösenord, som t.ex. en kod skickad till en mobil eller mail.
+
+Ett annat sätt är rate-limiting vilket stoppar hur många gånger man kan försöka logga in under en viss tid, vilket kan göra brute force attacker för långsamma.
+
+4 Describe the potential consequences of Insecure Deserialization in web applications. How can developers protect against such attacks?
+En osäker avserialiseringsexploatering är resultatet av deserialisering av data från opålitliga källor och kan resultera i allvarliga konsekvenser som DDoS-attacker och fjärrkörning av kod.
+Det enda säkra sättet att skydda mot osäkra deserialiseringsattacker är att förbjuda deserialisering av data från opålitliga källor.
+
+5 Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods suggested in the article to prevent XSS attacks in web applications.
+Skriptsårbarheter över flera webbplatser uppstår när webbapplikationer tillåter användare att lägga till anpassad kod i en url-sökväg eller på en webbplats som kommer att ses av andra
+ användare. Denna sårbarhet kan utnyttjas för att köra skadlig JavaScript-kod i ett offers webbläsare.
+
+ Ett sätt att minska risken för XSS är att inte tillåta icketrovärdiga http förfrågningar samt att sanera användargenererat innehåll.
+ Moderna frameworks som ReactJS och Ruby on Rails har viss inbyggt skydd mot XSS
